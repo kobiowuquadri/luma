@@ -1,0 +1,9 @@
+{
+  "$comment": "Set available to true only when the video, its WebVTT captions and the transcript below are all real and match the build.",
+  "available": false,
+  "video": null,
+  "captions": null,
+  "poster": null,
+  "durationLabel": null,
+  "transcript": []
+}

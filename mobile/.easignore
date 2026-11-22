@@ -1,0 +1,26 @@
+# Files EAS Build does not upload (used with EAS_NO_VCS=1).
+# Mirrors .gitignore: EAS installs dependencies and runs prebuild itself.
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+/android
+/ios
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+*.pem
+.env*.local
+*.tsbuildinfo
+*.apk
+*.aab

@@ -1,0 +1,317 @@
+[
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Biology",
+    "box": [
+     120,
+     113,
+     202,
+     141
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "First Term, 2026/2027 session",
+    "box": [
+     785.5625,
+     113,
+     1120,
+     141
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "heading",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "SS2 BIOLOGY – HANDOUT 3",
+    "box": [
+     120,
+     203.5,
+     828.328125,
+     259.5
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "heading",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Topic: Photosynthesis",
+    "box": [
+     120,
+     278.5,
+     472.28125,
+     320.5
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Teacher: Mrs. A. Okafor",
+    "box": [
+     120,
+     350.453125,
+     452.78125,
+     387.453125
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Date: 13 November 2026",
+    "box": [
+     775.359375,
+     350.453125,
+     1120,
+     387.453125
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "heading",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "1. What is photosynthesis?",
+    "box": [
+     120,
+     432.71875,
+     527.453125,
+     472.71875
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Photosynthesis is the process by which green plants make their own",
+    "box": [
+     120,
+     491.828125,
+     1043.515625,
+     528.828125
+    ]
+   },
+   {
+    "text": "food. They use light energy from the sun, water from the soil and carbon",
+    "box": [
+     120,
+     540.09375,
+     1107.328125,
+     577.09375
+    ]
+   },
+   {
+    "text": "dioxide from the air. The food made is glucose, and oxygen is given off.",
+    "box": [
+     120,
+     588.359375,
+     1100.765625,
+     625.359375
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "heading",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "2. Word equation",
+    "box": [
+     120,
+     670.625,
+     386.40625,
+     710.625
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "carbon dioxide + water → glucose + oxygen",
+    "box": [
+     144,
+     747.734375,
+     749.796875,
+     784.734375
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "This reaction needs light and chlorophyll.",
+    "box": [
+     120,
+     818,
+     686.53125,
+     855
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "heading",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "3. Where it happens",
+    "box": [
+     120,
+     900.265625,
+     426.734375,
+     940.265625
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Photosynthesis takes place mainly in the leaves, inside tiny parts called",
+    "box": [
+     120,
+     959.375,
+     1087.84375,
+     996.375
+    ]
+   },
+   {
+    "text": "chloroplasts. Chloroplasts contain chlorophyll, the green pigment that",
+    "box": [
+     120,
+     1007.640625,
+     1068.984375,
+     1044.640625
+    ]
+   },
+   {
+    "text": "absorbs light.",
+    "box": [
+     120,
+     1055.90625,
+     303.21875,
+     1092.90625
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "heading",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "4. Factors that affect the rate",
+    "box": [
+     120,
+     1138.171875,
+     565.8125,
+     1178.171875
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "list",
+  "prefix": "• ",
+  "lines": [
+   {
+    "text": "Light intensity",
+    "box": [
+     160,
+     1197.28125,
+     359.28125,
+     1234.28125
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "list",
+  "prefix": "• ",
+  "lines": [
+   {
+    "text": "Carbon dioxide concentration",
+    "box": [
+     160,
+     1247.546875,
+     564.109375,
+     1284.546875
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "list",
+  "prefix": "• ",
+  "lines": [
+   {
+    "text": "Temperature",
+    "box": [
+     160,
+     1297.8125,
+     331.296875,
+     1334.8125
+    ]
+   }
+  ]
+ },
+ {
+  "kind": "text",
+  "prefix": "",
+  "lines": [
+   {
+    "text": "Assignment: Answer questions 1–5 on page 47 of your textbook.",
+    "box": [
+     145,
+     1405.078125,
+     1036.484375,
+     1442.078125
+    ]
+   },
+   {
+    "text": "Submit on Friday, 27 November 2026.",
+    "box": [
+     145,
+     1453.34375,
+     668.8125,
+     1490.34375
+    ]
+   }
+  ]
+ }
+]

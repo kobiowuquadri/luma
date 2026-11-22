@@ -1,0 +1,625 @@
+{
+ "note": "Original sample handout written for LUMA's preview. Line positions are measured on the sample, not produced by a real scan.",
+ "image": {
+  "src": "/sample/handout.webp",
+  "fallback": "/sample/handout.jpg",
+  "width": 900,
+  "height": 1200
+ },
+ "paragraphs": [
+  {
+   "id": "P1",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L1",
+     "text": "Biology",
+     "quad": [
+      [
+       157.8,
+       134.3
+      ],
+      [
+       211.5,
+       136.5
+      ],
+      [
+       211.2,
+       156.6
+      ],
+      [
+       157.3,
+       154.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P2",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L2",
+     "text": "First Term, 2026/2027 session",
+     "quad": [
+      [
+       553.8,
+       150.3
+      ],
+      [
+       756.1,
+       158.4
+      ],
+      [
+       756.5,
+       178.5
+      ],
+      [
+       553.8,
+       170.3
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P3",
+   "kind": "heading",
+   "lines": [
+    {
+     "id": "L3",
+     "text": "SS2 BIOLOGY – HANDOUT 3",
+     "quad": [
+      [
+       156.6,
+       185.1
+      ],
+      [
+       584.1,
+       202.0
+      ],
+      [
+       584.3,
+       238.0
+      ],
+      [
+       155.9,
+       221.2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P4",
+   "kind": "heading",
+   "lines": [
+    {
+     "id": "L4",
+     "text": "Topic: Photosynthesis",
+     "quad": [
+      [
+       155.7,
+       227.4
+      ],
+      [
+       371.8,
+       235.9
+      ],
+      [
+       371.6,
+       264.2
+      ],
+      [
+       155.1,
+       255.8
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P5",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L5",
+     "text": "Teacher: Mrs. A. Okafor",
+     "quad": [
+      [
+       154.8,
+       268.2
+      ],
+      [
+       359.8,
+       276.2
+      ],
+      [
+       359.5,
+       301.8
+      ],
+      [
+       154.2,
+       293.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P6",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L6",
+     "text": "Date: 13 November 2026",
+     "quad": [
+      [
+       548.1,
+       283.5
+      ],
+      [
+       758.3,
+       291.6
+      ],
+      [
+       758.7,
+       317.1
+      ],
+      [
+       548.2,
+       309.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P7",
+   "kind": "heading",
+   "lines": [
+    {
+     "id": "L7",
+     "text": "1. What is photosynthesis?",
+     "quad": [
+      [
+       153.8,
+       315.2
+      ],
+      [
+       404.3,
+       324.7
+      ],
+      [
+       404.1,
+       352.2
+      ],
+      [
+       153.2,
+       342.7
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P8",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L8",
+     "text": "Photosynthesis is the process by which green plants make their own",
+     "quad": [
+      [
+       153.0,
+       349.1
+      ],
+      [
+       713.9,
+       370.3
+      ],
+      [
+       714.3,
+       396.1
+      ],
+      [
+       152.5,
+       375.0
+      ]
+     ]
+    },
+    {
+     "id": "L9",
+     "text": "food. They use light energy from the sun, water from the soil and carbon",
+     "quad": [
+      [
+       152.4,
+       376.9
+      ],
+      [
+       752.5,
+       399.4
+      ],
+      [
+       752.9,
+       425.2
+      ],
+      [
+       151.8,
+       402.9
+      ]
+     ]
+    },
+    {
+     "id": "L10",
+     "text": "dioxide from the air. The food made is glucose, and oxygen is given off.",
+     "quad": [
+      [
+       151.8,
+       404.8
+      ],
+      [
+       749.0,
+       427.0
+      ],
+      [
+       749.4,
+       452.9
+      ],
+      [
+       151.2,
+       430.8
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P9",
+   "kind": "heading",
+   "lines": [
+    {
+     "id": "L11",
+     "text": "2. Word equation",
+     "quad": [
+      [
+       150.7,
+       452.5
+      ],
+      [
+       317.8,
+       458.6
+      ],
+      [
+       317.5,
+       486.6
+      ],
+      [
+       150.1,
+       480.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P10",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L12",
+     "text": "carbon dioxide + water → glucose + oxygen",
+     "quad": [
+      [
+       164.4,
+       498.1
+      ],
+      [
+       538.2,
+       511.6
+      ],
+      [
+       538.3,
+       537.9
+      ],
+      [
+       163.9,
+       524.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P11",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L13",
+     "text": "This reaction needs light and chlorophyll.",
+     "quad": [
+      [
+       148.8,
+       538.8
+      ],
+      [
+       499.8,
+       551.3
+      ],
+      [
+       499.8,
+       577.8
+      ],
+      [
+       148.3,
+       565.3
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P12",
+   "kind": "heading",
+   "lines": [
+    {
+     "id": "L14",
+     "text": "3. Where it happens",
+     "quad": [
+      [
+       147.8,
+       587.4
+      ],
+      [
+       341.0,
+       594.2
+      ],
+      [
+       340.7,
+       622.6
+      ],
+      [
+       147.1,
+       615.9
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P13",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L15",
+     "text": "Photosynthesis takes place mainly in the leaves, inside tiny parts called",
+     "quad": [
+      [
+       147.0,
+       622.5
+      ],
+      [
+       744.6,
+       643.2
+      ],
+      [
+       745.0,
+       669.9
+      ],
+      [
+       146.4,
+       649.3
+      ]
+     ]
+    },
+    {
+     "id": "L16",
+     "text": "chloroplasts. Chloroplasts contain chlorophyll, the green pigment that",
+     "quad": [
+      [
+       146.4,
+       651.2
+      ],
+      [
+       733.5,
+       671.4
+      ],
+      [
+       733.9,
+       698.2
+      ],
+      [
+       145.8,
+       678.2
+      ]
+     ]
+    },
+    {
+     "id": "L17",
+     "text": "absorbs light.",
+     "quad": [
+      [
+       145.7,
+       680.1
+      ],
+      [
+       263.9,
+       684.1
+      ],
+      [
+       263.5,
+       711.1
+      ],
+      [
+       145.1,
+       707.1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P14",
+   "kind": "heading",
+   "lines": [
+    {
+     "id": "L18",
+     "text": "4. Factors that affect the rate",
+     "quad": [
+      [
+       144.6,
+       729.6
+      ],
+      [
+       425.4,
+       739.0
+      ],
+      [
+       425.3,
+       767.9
+      ],
+      [
+       144.0,
+       758.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P15",
+   "kind": "list",
+   "lines": [
+    {
+     "id": "L19",
+     "text": "• Light intensity",
+     "quad": [
+      [
+       168.7,
+       766.1
+      ],
+      [
+       297.4,
+       770.4
+      ],
+      [
+       297.1,
+       797.6
+      ],
+      [
+       168.2,
+       793.4
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P16",
+   "kind": "list",
+   "lines": [
+    {
+     "id": "L20",
+     "text": "• Carbon dioxide concentration",
+     "quad": [
+      [
+       168.1,
+       796.6
+      ],
+      [
+       424.1,
+       805.0
+      ],
+      [
+       423.9,
+       832.3
+      ],
+      [
+       167.5,
+       824.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P17",
+   "kind": "list",
+   "lines": [
+    {
+     "id": "L21",
+     "text": "• Temperature",
+     "quad": [
+      [
+       167.5,
+       827.2
+      ],
+      [
+       279.2,
+       830.8
+      ],
+      [
+       278.9,
+       858.3
+      ],
+      [
+       166.9,
+       854.7
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "P18",
+   "kind": "text",
+   "lines": [
+    {
+     "id": "L22",
+     "text": "Assignment: Answer questions 1–5 on page 47 of your textbook.",
+     "quad": [
+      [
+       156.7,
+       892.6
+      ],
+      [
+       716.9,
+       910.3
+      ],
+      [
+       717.3,
+       937.9
+      ],
+      [
+       156.1,
+       920.3
+      ]
+     ]
+    },
+    {
+     "id": "L23",
+     "text": "Submit on Friday, 27 November 2026.",
+     "quad": [
+      [
+       156.1,
+       922.3
+      ],
+      [
+       488.8,
+       932.8
+      ],
+      [
+       488.8,
+       960.5
+      ],
+      [
+       155.5,
+       950.2
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "$comment": "Fill this in only after the APK has been built, installed and checked on a real phone. While available is false the site shows no download button.",
+  "available": false,
+  "version": null,
+  "url": null,
+  "fileName": null,
+  "sizeBytes": null,
+  "sha256": null,
+  "minAndroid": "Android 7.0",
+  "publishedOn": null,
+  "testedOn": null
+}

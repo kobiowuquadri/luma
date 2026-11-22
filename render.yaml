@@ -1,0 +1,44 @@
+# Render Blueprint for the LUMA API (Go). Create it from the Render
+# dashboard: New > Blueprint > pick this repository.
+# Secrets use `sync: false`: Render asks for their values on first deploy
+# and never stores them in this file.
+services:
+  - type: web
+    name: luma-api
+    runtime: go
+    rootDir: api
+    # Frankfurt is Render's closest region to Nigeria. Free instances sleep
+    # after inactivity and take about a minute to wake; use a paid instance
+    # for the pilot so the first question of the day is not slow.
+    region: frankfurt
+    plan: free
+    buildCommand: go build -trimpath -ldflags="-s -w" -o bin/luma-api ./cmd/server
+    startCommand: ./bin/luma-api
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # Render sets PORT itself; the server binds to it.
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: YARNGPT_API_KEY
+        sync: false
+      - key: LUMA_CLIENT_TOKEN
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-6-luna
+      - key: OPENAI_REASONING_EFFORT
+        value: low
+      - key: YARNGPT_BASE_URL
+        value: https://api.yarngpt.ai
+      - key: TRUST_PROXY
+        value: "true"
+      - key: DAILY_ASK_LIMIT
+        value: "400"
+      - key: DAILY_TRANSCRIBE_LIMIT
+        value: "100"
+      - key: DAILY_SPEECH_LIMIT
+        value: "100"
+      - key: PER_DEVICE_PER_MINUTE
+        value: "8"
+      - key: PER_DEVICE_PER_DAY
+        value: "80"

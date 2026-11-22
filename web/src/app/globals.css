@@ -1,0 +1,356 @@
+@import "tailwindcss";
+
+/*
+ * LUMA website design tokens.
+ * - Site themes (data-theme on <html>): light ivory (default), dark, yellow on black.
+ * - Reader palettes (data-palette on the preview) mirror mobile/src/theme/palettes.ts
+ *   exactly, so the preview shows what the app shows.
+ * Every text pair is checked by `node design/check-contrast.mjs` (text >= 7:1, UI >= 3:1).
+ * --hairline is decorative only (section dividers); interactive edges use --border.
+ */
+:root,
+[data-theme="light"] {
+  /* theme:light */
+  --bg: #FAF8F3;
+  --surface: #F2EDE3;
+  --surface-sunken: #E9E3D6;
+  --fg: #191814;
+  --fg-muted: #4D4841;
+  --accent: #0A5651;
+  --accent-pressed: #073F3B;
+  --on-accent: #FFFFFF;
+  --accent-soft: #DCEAE5;
+  --border: #857C6D;
+  --hairline: #E2DBCD;
+  --focus: #0A5651;
+  --highlight: #F3D573;
+  --on-highlight: #191814;
+  --ink: #191814;
+  --on-ink: #FAF8F3;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    /* theme:systemdark */
+    --bg: #141517;
+    --surface: #1E2023;
+    --surface-sunken: #0E0F10;
+    --fg: #EEE8DC;
+    --fg-muted: #C9C1B3;
+    --accent: #74D4C7;
+    --accent-pressed: #A3E6DD;
+    --on-accent: #08201D;
+    --accent-soft: #123A36;
+    --border: #8D989D;
+    --hairline: #2E3135;
+    --focus: #74D4C7;
+    --highlight: #5C4A10;
+    --on-highlight: #FFF6DC;
+    --ink: #EEE8DC;
+    --on-ink: #141517;
+    color-scheme: dark;
+  }
+}
+
+[data-theme="dark"],
+.band-dark {
+  /* theme:dark */
+  --bg: #141517;
+  --surface: #1E2023;
+  --surface-sunken: #0E0F10;
+  --fg: #EEE8DC;
+  --fg-muted: #C9C1B3;
+  --accent: #74D4C7;
+  --accent-pressed: #A3E6DD;
+  --on-accent: #08201D;
+  --accent-soft: #123A36;
+  --border: #8D989D;
+  --hairline: #2E3135;
+  --focus: #74D4C7;
+  --highlight: #5C4A10;
+  --on-highlight: #FFF6DC;
+  --ink: #EEE8DC;
+  --on-ink: #141517;
+  color-scheme: dark;
+}
+
+[data-theme="contrast"],
+[data-theme="contrast"] .band-dark {
+  /* theme:contrast */
+  --bg: #000000;
+  --surface: #000000;
+  --surface-sunken: #161616;
+  --fg: #FFE14D;
+  --fg-muted: #FFE14D;
+  --accent: #FFE14D;
+  --accent-pressed: #FFF0A3;
+  --on-accent: #000000;
+  --accent-soft: #332C00;
+  --border: #FFE14D;
+  --hairline: #FFE14D;
+  --focus: #FFFFFF;
+  --highlight: #FFE14D;
+  --on-highlight: #000000;
+  --ink: #FFE14D;
+  --on-ink: #000000;
+  color-scheme: dark;
+}
+
+/* Reader palettes: the same values as the app (mobile/src/theme/palettes.ts). */
+[data-palette="paper"] {
+  /* theme:readerpaper */
+  --bg: #F5EFE3; --surface: #FCF9F2; --surface-sunken: #EAE2D2; --fg: #1D1B18; --fg-muted: #45403A;
+  --accent: #0A5651; --on-accent: #FFFFFF; --accent-soft: #D6E8E2; --border: #7A7062; --focus: #0A5651;
+  --highlight: #F3D573; --on-highlight: #1D1B18;
+}
+[data-palette="white"] {
+  /* theme:readerwhite */
+  --bg: #FFFFFF; --surface: #F3F5F5; --surface-sunken: #E4E9E9; --fg: #101417; --fg-muted: #3B4347;
+  --accent: #085B55; --on-accent: #FFFFFF; --accent-soft: #D9EEEA; --border: #6F787C; --focus: #085B55;
+  --highlight: #FFE07A; --on-highlight: #101417;
+}
+[data-palette="dark"] {
+  /* theme:readerdark */
+  --bg: #121416; --surface: #1B1F22; --surface-sunken: #0B0D0E; --fg: #EEE8DC; --fg-muted: #CCC4B6;
+  --accent: #74D4C7; --on-accent: #08201D; --accent-soft: #123A36; --border: #8D989D; --focus: #74D4C7;
+  --highlight: #5C4A10; --on-highlight: #FFF6DC;
+}
+[data-palette="contrast"] {
+  /* theme:readercontrast */
+  --bg: #000000; --surface: #000000; --surface-sunken: #161616; --fg: #FFE14D; --fg-muted: #FFE14D;
+  --accent: #FFE14D; --on-accent: #000000; --accent-soft: #332C00; --border: #FFE14D; --focus: #FFFFFF;
+  --highlight: #FFE14D; --on-highlight: #000000;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--surface-sunken);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-accent-pressed: var(--accent-pressed);
+  --color-on-accent: var(--on-accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--border);
+  --color-hairline: var(--hairline);
+  --color-highlight: var(--highlight);
+  --color-on-highlight: var(--on-highlight);
+  --color-ink: var(--ink);
+  --color-on-ink: var(--on-ink);
+  --font-sans: var(--font-atkinson), system-ui, sans-serif;
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+}
+
+/* Element defaults live in the base layer so components and utilities override them. */
+@layer base {
+  html {
+    background: var(--bg);
+    color: var(--fg);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 1rem;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-atkinson), system-ui, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -10rem;
+  z-index: 50;
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--on-ink);
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Yorùbá, Igbo and Hausa text: Atkinson lacks ẹ ọ ṣ ị ụ ṅ ɓ ɗ ƙ, so use a font that has them. */
+.multilingual {
+  font-family: "Noto Sans", system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+/* LUMA's signature: a reading line at the start of a line of text. */
+.reading-rule {
+  position: relative;
+  padding-left: 1.1em;
+}
+.reading-rule::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 0.28em;
+  border-radius: 0.2em;
+  background: var(--accent);
+}
+
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.lift {
+  animation: lift 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.lift-delay-1 {
+  animation-delay: 250ms;
+}
+.lift-delay-2 {
+  animation-delay: 500ms;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--len, 600);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.draw {
+  stroke-dasharray: var(--len, 600);
+  animation: draw 1.4s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .container-luma {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 78rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-luma {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 0.6rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    text-decoration: none;
+    text-align: center;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: background-color 150ms ease, border-color 150ms ease;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--on-ink);
+    border-color: var(--ink);
+  }
+  .btn-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+  }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--fg);
+    border-color: var(--border);
+  }
+  .btn-secondary:hover {
+    background: var(--surface-sunken);
+  }
+  .btn-small {
+    min-height: 2.75rem;
+    padding: 0.45rem 1rem;
+    font-size: 1.0625rem;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 1.5rem;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--border);
+    background: var(--bg);
+    color: var(--fg);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .pill[aria-pressed="true"],
+  .pill:has(input:checked) {
+    background: var(--ink);
+    color: var(--on-ink);
+    border-color: var(--ink);
+  }
+  .pill:has(input:focus-visible) {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+}

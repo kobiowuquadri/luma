@@ -1,0 +1,24 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'app.luma'
+version = '0.1.0'
+
+android {
+  namespace "expo.modules.lumaocr"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+  }
+}
+
+dependencies {
+  // ML Kit Text Recognition v2, Latin script, BUNDLED model.
+  // The model is linked into the APK at build time, so the first scan works
+  // in airplane mode. Do not switch to
+  // com.google.android.gms:play-services-mlkit-text-recognition: that variant
+  // downloads its model through Play Services on first use.
+  implementation 'com.google.mlkit:text-recognition:16.0.1'
+}
