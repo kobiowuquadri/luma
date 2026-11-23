@@ -34,6 +34,10 @@ func main() {
 		os.Exit(1)
 	}
 
+	if cfg.BindHostIgnored {
+		logger.Warn("ignoring BIND_HOST on Render; listening on all interfaces. Remove BIND_HOST from the Render environment.")
+	}
+
 	deps := server.Deps{Config: cfg, Logger: logger}
 	if cfg.AnswersConfigured() {
 		deps.Answerer = openai.New(cfg.OpenAIBaseURL, cfg.OpenAIKey, cfg.OpenAIModel, cfg.OpenAIReasoningEffort,

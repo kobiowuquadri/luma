@@ -27,6 +27,8 @@ npx eas-cli build -p android --profile preview
 
 The `preview` profile produces an `.apk` (`android.buildType: "apk"`, internal distribution) for `armeabi-v7a` and `arm64-v8a`. EAS created the signing keystore on the first build and keeps it, so later builds update the installed app in place.
 
+**For an x86_64 emulator, build the `emulator` profile** (`eas build -p android --profile emulator`). The pilot APK only contains ARM code. Emulators can run ARM apps through translation, but React Native's library loader then looks for x86_64 libraries, doesn't find them, and the app crashes at start (`couldn't find DSO to load: libreactnative.so`). This does not affect real phones.
+
 Two gotchas:
 
 - **No git commits yet?** EAS packages the project from git by default. Until the repository has a commit, prefix the build command with `EAS_NO_VCS=1`. EAS then uploads `mobile/` minus the patterns in `mobile/.easignore`.

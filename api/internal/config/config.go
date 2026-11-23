@@ -34,11 +34,13 @@ type Limits struct {
 
 // Config is the full service configuration.
 type Config struct {
-	Port        string
-	BindHost    string // empty = all interfaces (Render); 127.0.0.1 for local runs
-	Version     string
-	ClientToken string
-	TrustProxy  bool
+	Port     string
+	BindHost string // empty = all interfaces (Render); 127.0.0.1 for local runs
+	// BindHostIgnored is true when BIND_HOST was set on Render and ignored.
+	BindHostIgnored bool
+	Version         string
+	ClientToken     string
+	TrustProxy      bool
 	// PreviewFixtures swaps OpenAI and YarnGPT for labelled fixtures so the
 	// online flow can be tried without keys. Never combined with real keys.
 	PreviewFixtures bool
@@ -145,6 +147,13 @@ func Load(getenv func(string) string) (Config, error) {
 	}
 	if _, err := strconv.Atoi(c.Port); err != nil {
 		errs = append(errs, "PORT must be a number")
+	}
+	// Render sets RENDER=true and can only reach the service on all
+	// interfaces. A BIND_HOST copied from a local .env would make the
+	// service unreachable there, so it is ignored.
+	if strings.EqualFold(getenv("RENDER"), "true") && c.BindHost != "" {
+		c.BindHost = ""
+		c.BindHostIgnored = true
 	}
 	if c.PreviewFixtures && (c.OpenAIKey != "" || c.YarnKey != "") {
 		errs = append(errs, "LUMA_PREVIEW_FIXTURES cannot be combined with OPENAI_API_KEY or YARNGPT_API_KEY; unset one or the other")

@@ -55,3 +55,14 @@ func TestPreviewFixturesRefuseRealKeys(t *testing.T) {
 		t.Fatalf("preview fixtures alone should load: %v", err)
 	}
 }
+
+func TestBindHostIgnoredOnRender(t *testing.T) {
+	c, err := Load(env(map[string]string{"RENDER": "true", "BIND_HOST": "127.0.0.1", "PORT": "8080"}))
+	if err != nil || c.BindHost != "" || !c.BindHostIgnored {
+		t.Fatalf("on Render the service must listen on all interfaces: %+v %v", c.BindHost, err)
+	}
+	local, _ := Load(env(map[string]string{"BIND_HOST": "127.0.0.1"}))
+	if local.BindHost != "127.0.0.1" || local.BindHostIgnored {
+		t.Fatal("local runs must keep BIND_HOST")
+	}
+}
